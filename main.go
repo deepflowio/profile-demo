@@ -57,7 +57,7 @@ func tickerLeak(id int) {
 			continue
 		}
 
-		if ticker != nil {
+		if ticker == nil {
 			ticker = time.NewTicker(3 * time.Millisecond)
 		}
 		for range ticker.C {
